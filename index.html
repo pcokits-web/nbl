@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 47th Birthday, Indah Saritiyas Putri</title>
+  <meta name="description" content="Website ucapan selamat ulang tahun ke-47 untuk Indah Saritiyas Putri." />
+  <meta property="og:title" content="Happy 47th Birthday, Indah Saritiyas Putri" />
+  <meta property="og:description" content="Hadiah ulang tahun digital premium untuk Indah Saritiyas Putri yang ke-47." />
+  <meta property="og:image" content="assets/og-birthday-indah.jpg" />
+  <meta name="theme-color" content="#fff1f6" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root{
+      --bg:#fff8fb; --bg2:#fff1ec; --bg3:#f5efff;
+      --ink:#3c2731; --soft:#765d68; --muted:#9b7c88;
+      --pink:#ef9ab8; --pink2:#ffd1df; --rose:#c97291; --lav:#bda6ff; --cream:#fff6ea; --gold:#d8a86f;
+      --glass:rgba(255,255,255,.66); --glass2:rgba(255,255,255,.42); --line:rgba(255,255,255,.72);
+      --shadow:0 24px 80px rgba(115,62,86,.18); --shadow2:0 12px 34px rgba(115,62,86,.12);
+      --max:1180px; --r:30px; --r2:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; min-height:100vh; color:var(--ink); font-family:Inter,system-ui,sans-serif; overflow-x:hidden;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(255,184,209,.72), transparent 26%),
+        radial-gradient(circle at 88% 10%, rgba(189,166,255,.55), transparent 24%),
+        radial-gradient(circle at 78% 82%, rgba(255,214,185,.72), transparent 24%),
+        linear-gradient(135deg,var(--bg),var(--bg2) 48%,var(--bg3));
+    }
+    body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at 50% 20%,#000,transparent 72%);pointer-events:none;z-index:-3}
+    .aurora{position:fixed;inset:-20%;z-index:-4;pointer-events:none;background:conic-gradient(from 180deg at 50% 50%,rgba(239,154,184,.24),rgba(189,166,255,.22),rgba(255,214,185,.22),rgba(239,154,184,.24));filter:blur(70px);animation:aurora 18s ease-in-out infinite alternate}
+    @keyframes aurora{to{transform:translate3d(4%,2%,0) rotate(18deg) scale(1.06)}}
+    #ambient{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.74}
+    .container{width:min(calc(100% - 34px),var(--max));margin-inline:auto}
+    .glass{background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(255,255,255,.48));border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .section{padding:92px 0;position:relative}
+    .badge{display:inline-flex;align-items:center;gap:10px;padding:10px 15px;border-radius:999px;background:rgba(255,255,255,.67);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow2);font-weight:800;font-size:12px;letter-spacing:.05em;color:#a75f78;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:99px;background:linear-gradient(135deg,var(--pink),var(--gold));box-shadow:0 0 22px rgba(239,154,184,.9)}
+    .btn{border:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:850;font-size:15px;transition:.25s ease;position:relative;overflow:hidden}
+    .btn:hover{transform:translateY(-2px)} .btn:active{transform:translateY(0)}
+    .btn-primary{color:#fff;background:linear-gradient(135deg,#d87999,#b58bf0 58%,#d9a86f);box-shadow:0 16px 34px rgba(204,112,148,.32)}
+    .btn-secondary{color:#9b5b74;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow2)}
+    .topbar{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(calc(100% - 26px),980px);z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.85);box-shadow:0 10px 34px rgba(95,47,68,.12);backdrop-filter:blur(18px)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:#704255;white-space:nowrap}.brand-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink2),var(--lav));box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+    .nav{display:flex;gap:4px}.nav a{padding:9px 12px;border-radius:999px;color:#765565;text-decoration:none;font-weight:750;font-size:13px}.nav a:hover{background:rgba(255,255,255,.65)}
+    .music-pill{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.85);color:#8f5369;font-weight:850;font-size:13px;cursor:pointer}
+    .bars{display:flex;gap:2px;height:16px;align-items:end}.bars span{width:3px;height:5px;border-radius:4px;background:#d87999;animation:bar 1s ease-in-out infinite;animation-play-state:paused}.music-pill.playing .bars span{animation-play-state:running}.bars span:nth-child(2){animation-delay:.15s}.bars span:nth-child(3){animation-delay:.3s}@keyframes bar{50%{height:15px}}
+    .hero{min-height:100svh;display:grid;place-items:center;padding:108px 0 74px;position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:38px;align-items:center}.hero h1{margin:18px 0 18px;font-family:'Playfair Display',serif;font-weight:900;letter-spacing:-.045em;line-height:.98;font-size:clamp(3.1rem,7.4vw,6.45rem);color:#472b36;text-wrap:balance}.hero h1 span{display:block;background:linear-gradient(135deg,#cf7694,#9f82ea 55%,#c89662);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-sub{max-width:670px;margin:0 0 28px;color:var(--soft);font-size:1.08rem;line-height:1.86}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.age-card{display:flex;gap:13px;flex-wrap:wrap;margin-top:24px}.age-item{min-width:126px;border-radius:20px;padding:15px 16px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow2)}.age-item strong{display:block;font-size:2rem;line-height:1;color:#96566f}.age-item small{display:block;margin-top:6px;color:var(--muted);font-weight:800}.hero-visual{border-radius:36px;padding:16px;min-height:620px;position:relative;overflow:hidden}.hero-photo{position:absolute;inset:16px;border-radius:28px;overflow:hidden;background:#fff}.hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03)}.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(55,26,39,.12),rgba(55,26,39,.03) 40%,rgba(55,26,39,.42))}.hero-floating{position:absolute;left:34px;right:34px;bottom:34px;border-radius:26px;padding:20px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 48px rgba(40,20,28,.2);backdrop-filter:blur(16px)}.hero-floating p{margin:0;font-family:'Playfair Display',serif;font-size:1.65rem;line-height:1.3;color:#4e2f3b}.shine{position:absolute;inset:0;background:linear-gradient(105deg,transparent 25%,rgba(255,255,255,.32) 45%,transparent 65%);transform:translateX(-110%);animation:shine 7s infinite}@keyframes shine{60%,100%{transform:translateX(110%)}}
+    .open-gate{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 20%,rgba(255,216,229,.98),rgba(255,247,250,.97) 48%,rgba(246,237,255,.98));display:grid;place-items:center;padding:22px;transition:opacity .8s ease,visibility .8s ease}.open-gate.hide{opacity:0;visibility:hidden}.gate-card{width:min(100%,560px);border-radius:36px;padding:34px;text-align:center;position:relative;overflow:hidden}.gate-card img{width:170px;height:170px;object-fit:cover;border-radius:50%;border:8px solid rgba(255,255,255,.68);box-shadow:var(--shadow);margin-bottom:18px}.gate-card h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,8vw,3.2rem);line-height:1.06;margin:0 0 12px;color:#4d2f3c}.gate-card p{margin:0 auto 22px;max-width:430px;color:var(--soft);line-height:1.7}.autoplay-note{font-size:12px;color:#967383;margin-top:13px;line-height:1.6}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 42px}.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(2.15rem,4.6vw,3.55rem);line-height:1.07;margin:0 0 13px;color:#4d303b;letter-spacing:-.025em}.section-head p{margin:0;color:var(--soft);line-height:1.78}.message-card{border-radius:34px;padding:34px;display:grid;grid-template-columns:.82fr 1.18fr;gap:26px;align-items:stretch}.message-photo{border-radius:28px;overflow:hidden;min-height:420px;position:relative}.message-photo img{width:100%;height:100%;object-fit:cover}.message-photo::after{content:"47";position:absolute;right:18px;bottom:14px;font-family:'Playfair Display',serif;font-size:7.5rem;font-weight:900;color:rgba(255,255,255,.78);line-height:.8;text-shadow:0 14px 38px rgba(0,0,0,.18)}.message-text{padding:12px 6px}.message-text p{font-size:1.05rem;line-height:1.92;color:#58424d;margin:0 0 17px}.message-text p:last-child{margin-bottom:0}.quote-highlight{border-left:4px solid rgba(216,121,153,.55);padding:14px 0 14px 18px;margin:18px 0;color:#70485a;font-weight:750;background:linear-gradient(90deg,rgba(255,226,236,.55),transparent);border-radius:0 18px 18px 0}
+    .slider-shell{border-radius:34px;padding:18px;overflow:hidden}.slider{position:relative;border-radius:28px;overflow:hidden;min-height:560px;background:#fff}.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease,transform .7s ease;transform:scale(1.02)}.slide.active{opacity:1;transform:scale(1)}.slide img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,22,32,.05),rgba(42,22,32,.62))}.slide-caption{position:absolute;left:24px;right:24px;bottom:24px;z-index:2;color:#fff}.slide-caption h3{margin:0 0 8px;font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);line-height:1.05}.slide-caption p{max-width:680px;margin:0;line-height:1.7;color:rgba(255,255,255,.88)}.slider-controls{position:absolute;top:18px;right:18px;z-index:4;display:flex;gap:8px}.round{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.35);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(12px)}.dots{position:absolute;left:24px;top:24px;z-index:4;display:flex;gap:8px}.dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.48);cursor:pointer}.dots button.active{width:26px;border-radius:99px;background:#fff}
+    .wish-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wish-card{border-radius:26px;padding:24px;min-height:190px;transition:.28s ease}.wish-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(115,62,86,.18)}.wish-card .icon{width:48px;height:48px;border-radius:17px;background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(255,255,255,.52));display:grid;place-items:center;box-shadow:var(--shadow2);margin-bottom:18px}.wish-card h3{font-size:1rem;line-height:1.65;margin:0;color:#58404b}.ai-card{border-radius:34px;padding:34px;display:grid;grid-template-columns:.95fr 1.05fr;gap:26px;align-items:center}.ai-panel{border-radius:28px;padding:24px;background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.42));border:1px solid rgba(255,255,255,.8)}.ai-panel h3{font-family:'Playfair Display',serif;font-size:2.15rem;margin:0 0 12px;color:#4d303b}.ai-panel p{color:var(--soft);line-height:1.75;margin:0 0 18px}.tone-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:16px}.tone{border:1px solid rgba(216,121,153,.24);background:rgba(255,255,255,.58);color:#925b70;border-radius:999px;padding:10px 13px;font-weight:800;cursor:pointer}.tone.active{background:linear-gradient(135deg,#e58aaa,#b995f2);color:#fff}.ai-output{min-height:250px;border-radius:28px;padding:26px;background:#fff;border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow2);font-size:1.06rem;line-height:1.9;color:#573f4b;position:relative}.ai-output::before{content:"Ucapan ✦";position:absolute;right:18px;top:14px;font-size:11px;font-weight:900;color:#b78396;letter-spacing:.09em;text-transform:uppercase}.typing{border-right:2px solid #d87999;animation:cursor .7s step-end infinite}@keyframes cursor{50%{border-color:transparent}}
+    .gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}.gallery-item{border-radius:28px;overflow:hidden;min-height:360px;position:relative;cursor:pointer}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.45s ease}.gallery-item:hover img{transform:scale(1.05)}.gallery-item::after{content:"Lihat Foto";position:absolute;left:16px;bottom:16px;padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.86);color:#74485a;font-weight:900;backdrop-filter:blur(12px)}.timeline{display:grid;gap:16px;max-width:850px;margin:0 auto}.time-item{display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:start}.time-dot{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;font-weight:900;color:#fff;background:linear-gradient(135deg,#d87999,#b995f2);box-shadow:var(--shadow2)}.time-content{border-radius:24px;padding:21px}.time-content h3{margin:0 0 8px;color:#513542}.time-content p{margin:0;color:var(--soft);line-height:1.7}.final-card{border-radius:38px;padding:44px;text-align:center;background:radial-gradient(circle at 20% 20%,rgba(255,205,221,.55),transparent 34%),radial-gradient(circle at 82% 30%,rgba(189,166,255,.45),transparent 32%),linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.45));border:1px solid rgba(255,255,255,.82);box-shadow:var(--shadow)}.final-card h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);line-height:1.06;margin:0 0 16px}.final-card p{max-width:760px;margin:0 auto 25px;color:var(--soft);line-height:1.85}.footer{padding:35px 0 52px;text-align:center;color:var(--soft)}
+    .lightbox{position:fixed;inset:0;z-index:80;background:rgba(40,21,31,.72);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:18px}.lightbox.active{display:flex}.lightbox img{max-width:min(100%,920px);max-height:88vh;border-radius:26px;box-shadow:0 30px 90px rgba(0,0,0,.35)}.close-light{position:absolute;top:20px;right:20px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.56);background:rgba(255,255,255,.25);color:#fff;font-size:22px;cursor:pointer}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);opacity:0;z-index:90;padding:12px 16px;border-radius:999px;background:rgba(58,35,46,.84);color:#fff;font-weight:800;font-size:13px;transition:.28s ease}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:translateY(0)}
+
+    .tap-hint{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);opacity:0;z-index:95;padding:12px 17px;border-radius:999px;background:rgba(76,43,58,.9);color:#fff;font-weight:850;font-size:13px;box-shadow:0 18px 44px rgba(70,30,48,.24);transition:.3s ease;pointer-events:none}.tap-hint.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .floating-player{position:fixed;right:18px;bottom:18px;z-index:55;display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 50px rgba(100,50,73,.18);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);cursor:pointer;color:#6f4054;max-width:285px}.player-icon{width:42px;height:42px;border-radius:16px;background:linear-gradient(135deg,#e486a5,#b996f2);display:grid;place-items:center;color:#fff;box-shadow:0 12px 24px rgba(216,121,153,.28)}.player-text{display:flex;flex-direction:column;line-height:1.2}.player-text strong{font-size:13px}.player-text small{font-size:11px;color:#9a7183;margin-top:3px}.floating-player .bars span{height:6px}.floating-player.playing .bars span{animation-play-state:running}
+    .gate-ribbon{position:absolute;inset:auto -40px -60px auto;width:210px;height:210px;border-radius:60px;background:linear-gradient(135deg,rgba(239,154,184,.38),rgba(189,166,255,.34));filter:blur(4px);transform:rotate(18deg)}.gift-box{width:96px;height:86px;margin:0 auto 18px;position:relative;filter:drop-shadow(0 20px 34px rgba(161,76,110,.18));animation:giftFloat 2.8s ease-in-out infinite}.gift-box:before{content:"";position:absolute;left:10px;right:10px;bottom:0;height:58px;border-radius:16px;background:linear-gradient(135deg,#ef9ab8,#bda6ff)}.gift-box:after{content:"";position:absolute;left:0;right:0;top:18px;height:24px;border-radius:14px;background:linear-gradient(135deg,#ffd1df,#fff6ea)}.gift-lid{position:absolute;left:42px;top:11px;width:12px;height:75px;border-radius:99px;background:rgba(255,255,255,.75);z-index:2}.gift-bow{position:absolute;left:30px;top:0;width:36px;height:26px;border-radius:50% 50% 40% 40%;border:9px solid rgba(255,255,255,.82);z-index:3}.gift-bow:before{content:"";position:absolute;left:-42px;top:-9px;width:36px;height:26px;border-radius:50% 50% 40% 40%;border:9px solid rgba(255,255,255,.82)}@keyframes giftFloat{50%{transform:translateY(-8px) rotate(-2deg)}}
+    .typewriter-card{border-radius:34px;padding:30px;margin-bottom:24px;position:relative;overflow:hidden}.typewriter-card:before{content:"";position:absolute;width:220px;height:220px;right:-70px;top:-70px;border-radius:50%;background:radial-gradient(circle,rgba(255,209,223,.7),transparent 68%);filter:blur(6px)}.typed-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.12;margin:0 0 12px;color:#4d303b}.typed-letter{min-height:165px;color:#5b4350;font-size:1.05rem;line-height:1.9;position:relative;z-index:1}.typed-letter.typing{border-right:2px solid #d87999;animation:cursor .7s step-end infinite}
+    .life-grid{max-width:940px;margin:0 auto;display:grid;gap:16px}.life-item{display:grid;grid-template-columns:86px 1fr;gap:18px;align-items:stretch}.life-year{border-radius:24px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#d87999,#b995f2 62%,#d8a86f);color:#fff;box-shadow:var(--shadow2);font-weight:950;font-size:1.45rem;min-height:84px}.life-year small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.9}.life-content{border-radius:24px;padding:22px}.life-content h3{margin:0 0 8px;color:#503340}.life-content p{margin:0;color:var(--soft);line-height:1.74}
+    .premium-frame{position:relative}.premium-frame:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.72);border-radius:20px;z-index:2;pointer-events:none}.premium-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(63,30,44,.42));z-index:1;pointer-events:none}.premium-frame img{will-change:transform}
+
+    .gallery-item.premium-frame::after{content:"Lihat Foto";position:absolute;left:16px;bottom:16px;right:auto;top:auto;width:auto;height:auto;inset:auto auto 16px 16px;padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.86);color:#74485a;font-weight:900;backdrop-filter:blur(12px);z-index:3;filter:none}
+
+    @media(max-width:420px){.container{width:min(calc(100% - 18px),var(--max))}.topbar{width:calc(100% - 16px);padding:8px 9px}.hero{padding-top:96px}.hero h1{font-size:2.55rem}.hero-sub{line-height:1.72}.badge{font-size:11px;padding:8px 12px}.btn{padding:14px 18px;font-size:14px}.hero-visual{min-height:440px}.hero-floating p{font-size:1.12rem}.section-head h2{font-size:2rem}.message-photo{min-height:350px}.slider{min-height:460px}.slide-caption h3{font-size:1.7rem}.ai-output{min-height:220px;padding:22px;font-size:.98rem}.life-item{grid-template-columns:1fr}.life-year{min-height:62px}.floating-player{left:10px;right:10px;bottom:10px;max-width:none;justify-content:space-between}.tap-hint{bottom:82px;white-space:nowrap}.footer{padding-bottom:96px}}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}#ambient{display:none}}
+
+    @media(max-width:980px){.topbar{border-radius:24px}.nav{display:none}.hero-grid,.message-card,.ai-card{grid-template-columns:1fr}.hero{padding-top:112px}.hero-visual{min-height:560px}.wish-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.gallery-item{min-height:440px}.message-photo{min-height:520px}}
+    @media(max-width:640px){.container{width:min(calc(100% - 22px),var(--max))}.section{padding:72px 0}.hero h1{font-size:clamp(2.75rem,15vw,4.2rem)}.hero-sub{font-size:1rem}.hero-actions .btn{width:100%}.age-item{flex:1;min-width:110px}.hero-visual{min-height:520px;padding:11px;border-radius:30px}.hero-photo{inset:11px;border-radius:24px}.hero-floating{left:22px;right:22px;bottom:22px;padding:16px}.hero-floating p{font-size:1.28rem}.message-card,.ai-card,.final-card{padding:22px;border-radius:28px}.message-photo{min-height:420px}.slider{min-height:520px}.wish-grid{grid-template-columns:1fr}.gallery-item{min-height:380px}.gate-card{padding:24px}.music-pill span.label{display:none}.time-item{grid-template-columns:54px 1fr;gap:12px}.time-dot{width:48px;height:48px;border-radius:16px}.topbar{top:10px}.brand{font-size:13px}.brand-mark{width:30px;height:30px}.slide-caption{left:18px;right:18px;bottom:18px}}
+  </style>
+</head>
+<body>
+  <div class="aurora"></div>
+  <canvas id="ambient"></canvas>
+  <audio id="bgMusic" src="assets/birthday-music.mp3" loop preload="auto"></audio>
+
+  <div class="open-gate" id="openGate">
+    <div class="gate-card glass">
+      <span class="gate-ribbon"></span>
+      <div class="gift-box"><span class="gift-bow"></span><span class="gift-lid"></span></div>
+      <img src="assets/indah-portrait-1.jpg" alt="Indah Saritiyas Putri" />
+      <span class="badge"><span class="dot"></span> Hadiah Digital</span>
+      <h2>Untuk Indah Saritiyas Putri</h2>
+      <p>Ucapan ulang tahun ke-47 yang dibuat khusus dengan foto, musik, animasi, slider, dan kejutan kecil.</p>
+      <button class="btn btn-primary" id="openGift">Buka Hadiah Ini ✨</button>
+      <div class="autoplay-note">Musik akan langsung dicoba menyala otomatis. Jika browser memblokir, ketuk tombol ini sekali.</div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">♡</span><span>Indah 47th Birthday</span></div>
+    <nav class="nav">
+      <a href="#ucapan">Ucapan</a><a href="#slider">Foto</a><a href="#cerita47">47 Tahun</a><a href="#aiwish">Ucapan</a><a href="#doa">Doa</a>
+    </nav>
+    <button class="music-pill" id="musicBtn" type="button" aria-label="Putar atau jeda musik">
+      <span class="bars"><span></span><span></span><span></span></span><span class="label">Musik</span>
+    </button>
+  </header>
+
+  <button class="floating-player" id="musicFloatBtn" type="button" aria-label="Putar atau jeda musik ulang tahun">
+    <span class="player-icon">♪</span>
+    <span class="player-text"><strong>Happy Birthday Song</strong><small>Ketuk untuk play / pause</small></span>
+    <span class="bars"><span></span><span></span><span></span></span>
+  </button>
+  <div class="tap-hint" id="tapHint">Ketuk layar untuk menyalakan musik ♫</div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal show">
+          <span class="badge"><span class="dot"></span> Happy 47th Birthday</span>
+          <h1>Happy Birthday, <span>Indah Saritiyas Putri</span></h1>
+          <p class="hero-sub">Hari ini bukan sekadar tanggal biasa. Hari ini adalah perayaan untuk seseorang yang kuat, baik, dan penuh arti. Selamat ulang tahun yang ke-47, semoga hidupmu selalu dikelilingi doa baik, cinta yang tulus, dan kebahagiaan yang tidak pernah habis.</p>
+          <div class="hero-actions">
+            <a href="#ucapan" class="btn btn-primary" id="readBtn">Buka Ucapan ✨</a>
+            <button class="btn btn-secondary" id="surpriseBtn" type="button">Kejutan Kecil 🎉</button>
+          </div>
+          <div class="age-card">
+            <div class="age-item"><strong>47</strong><small>Tahun penuh cerita</small></div>
+            <div class="age-item"><strong>∞</strong><small>Doa baik untukmu</small></div>
+            <div class="age-item"><strong>1</strong><small>Hari paling spesial</small></div>
+          </div>
+        </div>
+        <div class="hero-visual glass reveal">
+          <div class="hero-photo"><img src="assets/birthday-hero-banner.jpg" alt="Foto ulang tahun Indah" /><span class="shine"></span></div>
+          <div class="hero-floating"><p>“Semoga hari ini seindah namamu, dan tahun ini membawa lebih banyak alasan untuk tersenyum.”</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ucapan" class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Ucapan Untukmu</h2><p>Kalimat sederhana, tapi ditulis dengan doa yang tulus untuk hari istimewa Indah.</p></div>
+
+        <div class="typewriter-card glass reveal">
+          <h3 class="typed-title">Surat kecil untuk Indah</h3>
+          <div class="typed-letter" id="mainTypedLetter"></div>
+        </div>
+        <div class="message-card glass reveal">
+          <div class="message-photo premium-frame"><img src="assets/indah-portrait-2.jpg" alt="Indah Saritiyas Putri" loading="lazy" /></div>
+          <div class="message-text">
+            <span class="badge"><span class="dot"></span> 47th Birthday</span>
+            <p><strong>Selamat ulang tahun yang ke-47, Indah Saritiyas Putri.</strong></p>
+            <p>Semoga di usia baru ini, setiap langkahmu selalu dipenuhi kebahagiaan, kesehatan, ketenangan, dan hal-hal baik yang datang tanpa henti.</p>
+            <p>Terima kasih sudah menjadi pribadi yang kuat, baik, dan penuh arti. Semoga semua doa yang kamu simpan diam-diam, satu per satu Allah mudahkan jalannya.</p>
+            <div class="quote-highlight">Semoga kamu semakin bahagia, semakin bersinar, dan selalu dikelilingi orang-orang yang tulus menyayangimu.</div>
+            <p>Di usia 47 tahun ini, semoga Allah menjaga hatimu tetap lapang, rezekimu semakin berkah, urusanmu dimudahkan, dan hidupmu selalu diberi alasan untuk tersenyum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slider" class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Galeri Kecil Untuk Hari Spesial</h2><p>Foto, cerita, dan suasana yang menjadi bagian dari halaman hadiah ini.</p></div>
+        <div class="slider-shell glass reveal">
+          <div class="slider" id="sliderBox">
+            <div class="dots" id="dots"></div>
+            <div class="slider-controls"><button class="round" id="prevSlide">‹</button><button class="round" id="nextSlide">›</button></div>
+            <article class="slide active"><img src="assets/slide-indah-1.jpg" alt="Indah tersenyum" loading="lazy" /><div class="slide-caption"><h3>Senyum yang Hangat</h3><p>Semoga senyum ini selalu punya banyak alasan untuk hadir setiap hari.</p></div></article>
+            <article class="slide"><img src="assets/slide-indah-2.jpg" alt="Potret Indah" loading="lazy" /><div class="slide-caption"><h3>Indah di Hari yang Indah</h3><p>Semoga usia baru ini membawa ketenangan, kesehatan, dan rezeki yang penuh berkah.</p></div></article>
+            <article class="slide"><img src="assets/slide-memory-3.jpg" alt="Momen bersama" loading="lazy" /><div class="slide-caption"><h3>Momen yang Dikenang</h3><p>Semoga selalu dikelilingi orang-orang baik yang tulus mendoakan dan menyayangi.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Untuk Hari yang Spesial</h2><p>Empat harapan sederhana untuk menemani langkah Indah di usia baru.</p></div>
+        <div class="wish-grid">
+          <article class="wish-card glass reveal"><div class="icon">♡</div><h3>Semoga senyummu selalu punya alasan untuk hadir setiap hari.</h3></article>
+          <article class="wish-card glass reveal"><div class="icon">✦</div><h3>Semoga hatimu selalu tenang, meski hari tidak selalu mudah.</h3></article>
+          <article class="wish-card glass reveal"><div class="icon">☁</div><h3>Semoga semua mimpi baikmu semakin dekat untuk menjadi nyata.</h3></article>
+          <article class="wish-card glass reveal"><div class="icon">❀</div><h3>Semoga kamu selalu merasa dicintai, dihargai, dan diperjuangkan.</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="aiwish" class="section">
+      <div class="container">
+        <div class="ai-card glass reveal">
+          <div class="ai-panel">
+            <span class="badge"><span class="dot"></span> Pilihan Ucapan</span>
+            <h3>Pilih Ucapan Untuk Indah</h3>
+            <p>Pilih gaya ucapan yang paling cocok. Website akan menampilkan pesan untuk Indah dengan efek mengetik yang terasa lebih personal dan natural.</p>
+            <div class="tone-row" id="toneRow">
+              <button class="tone active" data-tone="hangat">Hangat</button>
+              <button class="tone" data-tone="romantis">Romantis</button>
+              <button class="tone" data-tone="doa">Penuh Doa</button>
+              <button class="tone" data-tone="ceria">Ceria</button>
+            </div>
+            <button class="btn btn-primary" id="generateWish">Tampilkan Ucapan ✨</button>
+          </div>
+          <div class="ai-output" id="aiOutput">Indah Saritiyas Putri, selamat ulang tahun yang ke-47. Semoga hari ini menjadi pengingat bahwa kamu begitu berharga, dicintai, dan pantas mendapatkan begitu banyak kebahagiaan.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Foto Pilihan</h2><p>Ketuk foto untuk melihat lebih besar.</p></div>
+        <div class="gallery">
+          <div class="gallery-item glass reveal premium-frame"><img src="assets/indah-portrait-1.jpg" alt="Indah Saritiyas Putri" loading="lazy" /></div>
+          <div class="gallery-item glass reveal premium-frame"><img src="assets/indah-portrait-2.jpg" alt="Indah Saritiyas Putri" loading="lazy" /></div>
+          <div class="gallery-item glass reveal premium-frame"><img src="assets/memory-group.jpg" alt="Momen bersama" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="cerita47" class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>47 Tahun Penuh Cerita</h2><p>Usia 47 bukan hanya angka. Ia adalah perjalanan, kekuatan, pelajaran, doa, dan banyak kebaikan yang sudah dilewati.</p></div>
+        <div class="life-grid">
+          <div class="life-item reveal"><div class="life-year">47<small>Tahun</small></div><div class="life-content glass"><h3>Perjalanan yang Berarti</h3><p>Setiap tahun membawa cerita. Ada tawa, perjuangan, pelajaran, dan momen yang membentuk Indah menjadi pribadi yang kuat dan berharga.</p></div></div>
+          <div class="life-item reveal"><div class="life-year">Doa<small>Baik</small></div><div class="life-content glass"><h3>Semoga Semakin Tenang</h3><p>Semoga usia baru ini menghadirkan hati yang lebih lapang, pikiran yang lebih damai, dan hari-hari yang terasa lebih ringan.</p></div></div>
+          <div class="life-item reveal"><div class="life-year">Cinta<small>Tulus</small></div><div class="life-content glass"><h3>Dikelilingi Orang Baik</h3><p>Semoga Indah selalu dekat dengan orang-orang yang tulus menyayangi, menghargai, mendoakan, dan menjaga dengan sepenuh hati.</p></div></div>
+          <div class="life-item reveal"><div class="life-year">Berkah<small>Selalu</small></div><div class="life-content glass"><h3>Bab Baru yang Lebih Indah</h3><p>Semoga setelah hari ini, banyak pintu kebaikan terbuka: kesehatan, rezeki, kebahagiaan, dan kabar baik yang datang berulang.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="doa" class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Doa Terbaik Untukmu</h2><p>Untuk usia 47 tahun yang semoga menjadi awal dari banyak kebaikan baru.</p></div>
+        <div class="timeline">
+          <div class="time-item reveal"><div class="time-dot">01</div><div class="time-content glass"><h3>Kesehatan dan Ketenangan</h3><p>Semoga Allah selalu menjaga Indah dalam keadaan sehat, tenang, dan kuat menjalani setiap hari.</p></div></div>
+          <div class="time-item reveal"><div class="time-dot">02</div><div class="time-content glass"><h3>Rezeki yang Berkah</h3><p>Semoga pintu rezeki dibuka dari arah yang baik, cukup, berkah, dan membawa kebahagiaan.</p></div></div>
+          <div class="time-item reveal"><div class="time-dot">03</div><div class="time-content glass"><h3>Hati yang Bahagia</h3><p>Semoga hatimu selalu dilapangkan, urusanmu dimudahkan, dan hidupmu dipenuhi orang-orang tulus.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="final-card reveal">
+          <span class="badge"><span class="dot"></span> Special Gift</span>
+          <h2>Selamat Ulang Tahun ke-47, Indah</h2>
+          <p>Indah, kamu berhak bahagia hari ini dan setiap hari setelahnya. Jangan lupa tersenyum, karena senyummu adalah bagian paling indah dari hari ini.</p>
+          <button class="btn btn-primary" id="bigConfetti">Rayakan Sekarang 🎉</button>
+          <button class="btn btn-secondary" id="shareBtn" type="button">Bagikan Link ♡</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Dibuat khusus untuk <strong>Indah Saritiyas Putri</strong> — semoga hari ulang tahunmu seindah namamu.</footer>
+
+  <div class="lightbox" id="lightbox"><button class="close-light" id="closeLight">×</button><img id="lightImg" src="" alt="Preview foto" /></div>
+  <div class="toast" id="toast">Link berhasil disalin</div>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicBtn');
+    const musicFloatBtn = document.getElementById('musicFloatBtn');
+    const tapHint = document.getElementById('tapHint');
+    const openGate = document.getElementById('openGate');
+    const openGift = document.getElementById('openGift');
+    const toast = document.getElementById('toast');
+
+    music.volume = 0.72;
+    async function playMusic(){
+      try{ await music.play(); musicBtn.classList.add('playing'); musicFloatBtn.classList.add('playing'); tapHint.classList.remove('show'); return true; }
+      catch(e){ musicBtn.classList.remove('playing'); musicFloatBtn.classList.remove('playing'); tapHint.classList.add('show'); return false; }
+    }
+    function pauseMusic(){ music.pause(); musicBtn.classList.remove('playing'); musicFloatBtn.classList.remove('playing'); }
+    window.addEventListener('load', () => { playMusic(); });
+    ['touchstart','click','keydown'].forEach(evt => document.addEventListener(evt, () => { if(music.paused) playMusic(); }, {once:true}));
+    openGift.addEventListener('click', async()=>{ openGate.classList.add('hide'); await playMusic(); celebrate(); });
+    musicBtn.addEventListener('click',()=>{ music.paused ? playMusic() : pauseMusic(); });
+    musicFloatBtn.addEventListener('click',()=>{ music.paused ? playMusic() : pauseMusic(); });
+
+    function celebrate(){
+      confetti({particleCount:110,spread:92,startVelocity:36,origin:{y:.62},colors:['#ef9ab8','#ffd1df','#bda6ff','#fff6ea','#d8a86f']});
+      const end=Date.now()+1300;
+      (function frame(){confetti({particleCount:4,angle:60,spread:62,origin:{x:0},colors:['#ef9ab8','#ffd1df','#fff']});confetti({particleCount:4,angle:120,spread:62,origin:{x:1},colors:['#bda6ff','#fff6ea','#fff']});if(Date.now()<end)requestAnimationFrame(frame)})();
+    }
+    document.getElementById('surpriseBtn').addEventListener('click',celebrate);
+    document.getElementById('bigConfetti').addEventListener('click',celebrate);
+    document.getElementById('readBtn').addEventListener('click',()=>setTimeout(celebrate,250));
+
+    const revealObserver = new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');revealObserver.unobserve(entry.target)}})},{threshold:.13});
+    document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+
+
+    const mainLetter = `Selamat ulang tahun yang ke-47, Indah Saritiyas Putri. Hari ini adalah pengingat bahwa setiap perjalananmu punya arti, setiap lelahmu punya nilai, dan setiap senyummu selalu membawa hangat untuk orang-orang di sekitarmu. Semoga usia baru ini membuat hidupmu semakin tenang, sehat, bahagia, dan penuh berkah.`;
+    const mainTyped = document.getElementById('mainTypedLetter');
+    let mainTypedStarted = false;
+    function typeMainLetter(){
+      if(mainTypedStarted) return;
+      mainTypedStarted = true;
+      mainTyped.textContent='';
+      mainTyped.classList.add('typing');
+      let i=0;
+      const run=()=>{mainTyped.textContent=mainLetter.slice(0,i++); if(i<=mainLetter.length)setTimeout(run,20); else mainTyped.classList.remove('typing')};
+      run();
+    }
+    const typedObserver = new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){typeMainLetter(); typedObserver.disconnect();}})},{threshold:.28});
+    typedObserver.observe(mainTyped);
+
+    const canvas=document.getElementById('ambient'), ctx=canvas.getContext('2d'); let particles=[];
+    function resize(){canvas.width=innerWidth;canvas.height=innerHeight;particles=Array.from({length:Math.min(80,Math.floor(innerWidth/14))},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2.6+1,vx:(Math.random()-.5)*.26,vy:(Math.random()-.5)*.26,a:Math.random()*.5+.2}))}
+    function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(216,121,153,${p.a})`;ctx.fill()});requestAnimationFrame(draw)}
+    resize(); draw(); addEventListener('resize',resize);
+
+    const slides=[...document.querySelectorAll('.slide')], dotsBox=document.getElementById('dots'); let current=0, timer;
+    slides.forEach((_,i)=>{const b=document.createElement('button');b.addEventListener('click',()=>goSlide(i));dotsBox.appendChild(b)});
+    const dots=[...dotsBox.children];
+    function goSlide(i){slides[current].classList.remove('active');dots[current].classList.remove('active');current=(i+slides.length)%slides.length;slides[current].classList.add('active');dots[current].classList.add('active');clearInterval(timer);timer=setInterval(()=>goSlide(current+1),4600)}
+    document.getElementById('nextSlide').onclick=()=>goSlide(current+1); document.getElementById('prevSlide').onclick=()=>goSlide(current-1); goSlide(0);
+    const sliderBox=document.getElementById('sliderBox'); let touchStartX=0, touchStartY=0;
+    sliderBox.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].screenX; touchStartY=e.changedTouches[0].screenY;},{passive:true});
+    sliderBox.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchStartX; const dy=e.changedTouches[0].screenY-touchStartY; if(Math.abs(dx)>48 && Math.abs(dx)>Math.abs(dy)){dx<0?goSlide(current+1):goSlide(current-1)}},{passive:true});
+
+    const wishes={
+      hangat:['Indah Saritiyas Putri, selamat ulang tahun yang ke-47. Semoga hari ini memelukmu dengan kebahagiaan yang sederhana, doa yang tulus, dan rasa syukur yang hangat.','Di usia 47 tahun ini, semoga Indah selalu diberi hati yang tenang, tubuh yang sehat, dan hari-hari yang penuh senyum kecil yang berarti.'],
+      romantis:['Selamat ulang tahun, Indah. Semoga hari ini seindah namamu, selembut senyummu, dan sehangat kehadiranmu bagi orang-orang yang menyayangimu.','Untuk Indah yang istimewa, semoga usia 47 ini menjadi bab baru yang penuh cinta, ketenangan, dan banyak alasan untuk merasa dicintai.'],
+      doa:['Ya Allah, jagalah Indah Saritiyas Putri di usia 47 tahun ini. Lapangkan rezekinya, kuatkan hatinya, mudahkan urusannya, dan bahagiakan hidupnya.','Semoga Allah selalu menjaga Indah, memberi kesehatan, keberkahan, ketenangan hati, serta mengabulkan doa-doa baik yang selama ini disimpan diam-diam.'],
+      ceria:['Happy 47th Birthday, Indah! Semoga hari ini penuh tawa, kejutan manis, makanan enak, dan kabar baik yang datang beruntun.','Selamat ulang tahun ke-47, Indah! Semoga umur baru ini penuh energi baik, senyum yang banyak, dan hari-hari yang makin cerah.']
+    };
+    let tone='hangat'; const aiOut=document.getElementById('aiOutput');
+    document.querySelectorAll('.tone').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tone').forEach(b=>b.classList.remove('active'));btn.classList.add('active');tone=btn.dataset.tone}));
+    function typeText(text){aiOut.textContent='';aiOut.classList.add('typing');let i=0;const run=()=>{aiOut.textContent=text.slice(0,i++);if(i<=text.length)setTimeout(run,18);else aiOut.classList.remove('typing')};run()}
+    document.getElementById('generateWish').addEventListener('click',()=>{const list=wishes[tone];typeText(list[Math.floor(Math.random()*list.length)]);celebrate()});
+
+    const lightbox=document.getElementById('lightbox'), lightImg=document.getElementById('lightImg');
+    document.querySelectorAll('.gallery-item img').forEach(img=>img.addEventListener('click',()=>{lightImg.src=img.src;lightbox.classList.add('active')}));
+    document.getElementById('closeLight').onclick=()=>lightbox.classList.remove('active'); lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('active')});
+
+    document.querySelectorAll('.premium-frame').forEach(frame=>{
+      frame.addEventListener('mousemove',e=>{
+        const img=frame.querySelector('img'); if(!img) return;
+        const r=frame.getBoundingClientRect();
+        const x=((e.clientX-r.left)/r.width-.5)*10;
+        const y=((e.clientY-r.top)/r.height-.5)*10;
+        img.style.transform=`scale(1.045) translate(${x}px,${y}px)`;
+      });
+      frame.addEventListener('mouseleave',()=>{const img=frame.querySelector('img'); if(img) img.style.transform='';});
+    });
+
+    function showToast(text){toast.textContent=text;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}
+    document.getElementById('shareBtn').addEventListener('click',async()=>{try{if(navigator.share){await navigator.share({title:document.title,url:location.href});}else{await navigator.clipboard.writeText(location.href);showToast('Link berhasil disalin');}}catch(e){showToast('Link siap dibagikan')}});
+  </script>
+</body>
+</html>
